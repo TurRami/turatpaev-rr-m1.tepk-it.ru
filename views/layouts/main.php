@@ -39,10 +39,13 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest
+            ['label' => 'Продукция', 'url' => ['/products/index']],
+            ['label' => 'Цехи', 'url' => ['/workshops/index']],
+            ['label' => 'Продукция цехов', 'url' => ['/product-workshops/index']],
+            ['label' => 'Тип продукции', 'url' => ['/product-type/index']],
+            ['label' => 'Тип цеха', 'url' => ['/workshops-type/index']],
+            ['label' => 'Тип материала', 'url' => ['/material-type/index']],
+            /*Yii::$app->user->isGuest
                 ? ['label' => 'Login', 'url' => ['/site/login']]
                 : '<li class="nav-item">'
                     . Html::beginForm(['/site/logout'])
@@ -51,7 +54,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         ['class' => 'nav-link btn btn-link logout']
                     )
                     . Html::endForm()
-                    . '</li>'
+                    . '</li>'*/
         ]
     ]);
     NavBar::end();
